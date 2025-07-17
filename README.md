@@ -26,9 +26,10 @@ ALTER USER 'sys_test'@'localhost' IDENTIFIED WITH mysql_native_password BY 'pass
 
 
 Результатом работы должны быть скриншоты обозначенных заданий, а также простыня со всеми запросами.
+
+Команды:
 docker run --name mysql8-test -e MYSQL_ROOT_PASSWORD=root -p 3306:3306 -d mysql:8
 docker exec -it mysql8-test mysql -uroot -proot
-
 
 CREATE USER 'sys_temp'@'localhost' IDENTIFIED BY 'P@ssw0rd';
 SELECT User, Host FROM mysql.user;
